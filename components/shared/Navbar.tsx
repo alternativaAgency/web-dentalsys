@@ -13,6 +13,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,8 +56,14 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavMenu() {
   return (
-    <div className="flex items-center w-full py-3">
-      <div className="flex-1 flex justify-center">
+    <div className="flex w-full py-4">
+      <div className="flex-1 flex justify-center items-center gap-7">
+        <Link href="/" className="flex items-end">
+          <div className="flex items-center gap-2">
+            <Image src="/logo.svg" alt="Logo" width={80} height={80} />
+            <span className="font-bold text-xl">DentalSys</span>
+          </div>
+        </Link>
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -197,6 +205,18 @@ export function NavMenu() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+        <div className="flex gap-2">
+          <Link href="/login">
+            <Button className="px-4 py-2 rounded-full bg-dodgerblue-500 text-white text-md hover:bg-dodgerblue-500/80 transition cursor-pointer">
+              Área do Cliente
+            </Button>
+          </Link>
+          <Link href="/signup">
+            <Button className="px-4 py-2 rounded-full bg-secondary text-primary text-md hover:bg-secondary/50 transition cursor-pointer">
+              Sign Up
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

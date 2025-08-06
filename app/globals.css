@@ -6,12 +6,30 @@
 @theme {
 
   --color-background: oklch(0.985 0 0);
-  --color-primary: oklch(0.21 0.006 285.885);
+  --color-primary: var(--dodgerblue);
+  
+
+
+  --dodgerblue: var(--color-dodgerblue-500);
+  --color-dodgerblue-50: #f0f7ff;
+  --color-dodgerblue-100: #e0eefe;
+  --color-dodgerblue-200: #baddfd;
+  --color-dodgerblue-300: #7dc2fc;
+  --color-dodgerblue-400: #38a3f8;
+  --color-dodgerblue-500: #1890f1;
+  --color-dodgerblue-515: color-mix(in oklch, #1890f1 15%, white);
+  --color-dodgerblue-600: #0269c7;
+  --color-dodgerblue-700: #0353a1;
+  --color-dodgerblue-800: #074885;
+  --color-dodgerblue-900: #0c3d6e;
+  --color-dodgerblue-950: #082649;
 }
 
 .dark {
   --color-background: oklch(0.21 0.006 285.885);
   --color-primary: oklch(0.985 0 0);
+  --font-sans: var(--font-questrial);
+
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -24,7 +42,8 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
+  /* --accent: oklch(0.274 0.006 286.033); */
+  --accent: var(--color-dodgerblue-515);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -46,12 +65,17 @@
 }
 
 body {
-  transition: 
-    background-color 0.4s cubic-bezier(0.3, 0, 0, 1),
+  font-family: questrial, sans-serif !important;
+  transition: background-color 0.4s cubic-bezier(0.3, 0, 0, 1),
     color 0.4s cubic-bezier(0.2, 0, 0.2, 1);
   background-color: var(--color-background);
   color: var(--color-primary);
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: questrial, sans-serif;
+  color: var(--color-primary);
+}
+
 
 @theme inline {
 
@@ -124,7 +148,8 @@ body {
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
 
-  --accent: oklch(0.967 0.001 286.375);
+  /* --accent: oklch(0.967 0.001 286.375); */
+  --accent: var(--color-dodgerblue-515);
   --accent-foreground: oklch(0.21 0.006 285.885);
 
   --destructive: oklch(0.577 0.245 27.325);
@@ -161,6 +186,7 @@ body {
   --color-softpeach-800: #6b4949;
   --color-softpeach-900: #5b4141;
   --color-softpeach-950: #2f2020;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
 }

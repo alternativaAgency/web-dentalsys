@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Questrial } from "next/font/google";
 import { NavMenu } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer/Footer";
+
+const questrial = Questrial({
+  variable: "--font-questrial",
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,11 +19,12 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${questrial.variable} antialiased`}>
         <NavMenu />
-        <main>
+        <main className="text-primary">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
