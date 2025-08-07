@@ -4,11 +4,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-
   --color-background: oklch(0.985 0 0);
   --color-primary: var(--dodgerblue);
-  
-
 
   --dodgerblue: var(--color-dodgerblue-500);
   --color-dodgerblue-50: #f0f7ff;
@@ -71,14 +68,17 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary);
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: questrial, sans-serif;
   color: var(--color-primary);
 }
 
-
 @theme inline {
-
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -130,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-
   --radius: 0.625rem;
 
   --card: oklch(1 0 0);
@@ -193,9 +192,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @layer base {
   * {
+    -ms-overflow-style: none;
     @apply border-border outline-ring/50;
+    scrollbar-width: none;
   }
   body {
     @apply bg-background text-foreground;
+    transition-property: opacity, transform, filter, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 600ms;
   }
+}
+
+.page-transition {
+  opacity: 0;
+  background-color: var(--color-dodgerblue-300);
+  transform: translateY(40px);
+  filter: blur(12px);
 }
