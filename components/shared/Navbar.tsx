@@ -62,14 +62,14 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavMenu() {
   return (
-    <div className="flex w-full py-4">
+    <div className="flex w-full py-4 z-999">
       <div className="flex-1 flex justify-center items-center gap-32">
-        <Link href="/home" className="flex items-end">
+        <TransitionLink href="/home" className="flex items-end">
           <div className="flex items-center gap-2">
             <Image src="/logo.svg" alt="Logo" width={80} height={80} />
             <span className="text-zinc-700 font-bold text-xl">DentalSys</span>
           </div>
-        </Link>
+        </TransitionLink>
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -80,7 +80,7 @@ export function NavMenu() {
                     <NavigationMenuLink asChild>
                       <TransitionLink
                         className="relative from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md p-6 no-underline outline-hidden select-none focus:shadow-md hover:shadow-lg overflow-hidden"
-                        href="/about"
+                        href="/home"
                       >
                         {/* Background layer with blur */}
                         <div
@@ -239,7 +239,7 @@ export function NavMenu() {
             </Button>
           </TransitionLink>
           <TransitionLink href="/about">
-            <Button className="px-4 py-2 rounded-full bg-secondary text-primary text-md hover:bg-secondary/50 transition cursor-pointer">
+            <Button className="px-4 py-2 rounded-full bg-zinc-900 text-white text-md hover:bg-zinc-900/80 transition cursor-pointer">
               Saiba Mais
             </Button>
           </TransitionLink>

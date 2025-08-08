@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const CustomCard = () => {
   return (
-    <div className="flex items-center justify-center bg-neutral-100 px-8 py-24 text-neutral-800">
+    <div className="flex items-end justify-end px-8 py-24 text-neutral-800">
       <BlockInTextCard
         tag="/ Suporte"
         text={

@@ -6,6 +6,7 @@
 @theme {
   --color-background: oklch(0.985 0 0);
   --color-primary: var(--dodgerblue);
+  --font-sans: var(--font-questrial);
 
   --dodgerblue: var(--color-dodgerblue-500);
   --color-dodgerblue-50: #f0f7ff;
@@ -20,12 +21,24 @@
   --color-dodgerblue-800: #074885;
   --color-dodgerblue-900: #0c3d6e;
   --color-dodgerblue-950: #082649;
+
+    --color-softpeach-50: #faf6f6;
+  --color-softpeach-100: #f6f0f0;
+  --color-softpeach-200: #ebdddd;
+  --color-softpeach-300: #dcc5c5;
+  --color-softpeach-400: #c7a2a2;
+  --color-softpeach-500: #b08383;
+  --color-softpeach-600: #996969;
+  --color-softpeach-700: #805555;
+  --color-softpeach-800: #6b4949;
+  --color-softpeach-900: #5b4141;
+  --color-softpeach-950: #2f2020;
 }
 
 .dark {
   --color-background: oklch(0.21 0.006 285.885);
   --color-primary: oklch(0.985 0 0);
-  --font-sans: var(--font-questrial);
+  --font-sanx: var(--font-questrial);
 
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
@@ -75,7 +88,6 @@ h4,
 h5,
 h6 {
   font-family: questrial, sans-serif;
-  color: var(--color-primary);
 }
 
 @theme inline {

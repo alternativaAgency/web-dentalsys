@@ -47,13 +47,13 @@ export function PoweredByPaddle() {
           {paddleLinks.map((link) => (
             <Link
               key={link.label}
-              className="text-sm leading-[14px]"
+              className="text-sm leading-[14px] group hover:text-white duration-200"
               href={link.href}
               target="_blank"
             >
-              <span className="flex items-center gap-1">{'/ '}
+              <span className="flex items-center gap-1 group-hover:bg-dodgerblue-500 duration-200">
                 {link.label}
-                <ArrowUpRight className="text-dodgerblue-500 h-4 w-4" />
+                <ArrowUpRight className="text-dodgerblue-500 group-hover:text-white h-4 w-4 duration-200" />
               </span>
             </Link>
           ))}

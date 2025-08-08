@@ -1,8 +1,11 @@
-
+import VerticalAccordion from "./_components/VerticalAccordion"
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      About
+      <VerticalAccordion />
+    </div>
   )
 }
 

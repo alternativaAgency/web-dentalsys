@@ -10,13 +10,15 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
     <>
       <div className="grid grid-cols-3 h-screen">
-        <div className="col-span-2 h-full relative">
+        <div className="col-span-2 h-full relative overflow-hidden">
           <Image
-            src="/side-img.jpg"
+            src="/side-image.jpg"
             alt="logo"
-            className="h-full w-full object-cover bg-no-repeat pointer-events-none grayscale"
-            width={1000}
-            height={1000}
+            className="h-screen w-full object-cover bg-no-repeat pointer-events-none grayscale object-[center_45%]"
+            width={1920}
+            height={1080}
+            priority
+            quality={100}
           />
           <div className="absolute bottom-8 left-8 z-10">
             <TransitionLink href="/home">
@@ -36,7 +38,8 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
               </span>
             </TransitionLink>
           </div>
-          <div className="absolute inset-0 bg-dodgerblue-500/40 backdrop-blur-2xs pointer-events-none" />
+          <div className="absolute inset-0 bg-zinc-900/60 backdrop-blur-5xs pointer-events-none" />
+          {/* <div className="absolute inset-0 bg-dodgerblue-800/50 backdrop-blur-2xs pointer-events-none" /> */}
         </div>
         <section className="col-span-1 flex justify-center items-center flex-col py-10 h-full">
           {children}
