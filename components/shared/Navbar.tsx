@@ -70,6 +70,7 @@ export function NavMenu() {
             <span className="text-zinc-700 font-bold text-xl">DentalSys</span>
           </div>
         </TransitionLink>
+
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -134,14 +135,7 @@ export function NavMenu() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <TransitionLink href="/docs">Docs</TransitionLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuTrigger>List</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -229,8 +223,17 @@ export function NavMenu() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <TransitionLink href="/docs">Docs</TransitionLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+
         <div className="flex gap-2">
           <TransitionLink href="/login">
             <Button className="px-4 py-2 rounded-full bg-dodgerblue-500 text-white text-md hover:bg-dodgerblue-500/80 transition cursor-pointer">

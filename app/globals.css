@@ -218,7 +218,7 @@ h6 {
 
 .page-transition {
   opacity: 0;
-  background-color: var(--color-dodgerblue-300);
+  background-color: var(--color-zinc-600);
   transform: translateY(40px);
   filter: blur(12px);
 }
